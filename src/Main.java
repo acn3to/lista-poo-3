@@ -1,14 +1,19 @@
-import Ex4.Funcionario;
+import Ex5.Casa;
+import Ex5.Endereco;
+
+;
 
 public class Main {
-
     public static void main(String[] args) {
-        Funcionario funcionario = new Funcionario("João Silva", 30, 1.75, 70.5, "Gerente", 3000.00, "Recursos Humanos");
+        Endereco endereco = new Endereco("Rua das Flores", 6, "Brotas", "Salvador", "BA", "88000-000");
 
+        Casa casa = new Casa(endereco, 3, 120.0, 350000.0);
 
-        funcionario.promover("Diretor", 5000.00);
+        double taxaImposto = 0.015;
+        double imposto = casa.calcularImposto(taxaImposto);
 
-        System.out.println(funcionario);
+        System.out.println(casa);
 
+        System.out.println("Imposto calculado: " + imposto);
     }
 }

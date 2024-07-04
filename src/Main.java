@@ -1,27 +1,14 @@
-package Ex3;
-
-import java.util.ArrayList;
-import java.util.List;
+import Ex4.Funcionario;
 
 public class Main {
 
     public static void main(String[] args) {
-        Filme filme1 = new Filme("Inception", 2010, "Christopher Nolan", "Muito bom!");
-        Filme filme2 = new Filme("The Dark Knight", 2008, "Christopher Nolan", "Perfeito!");
-        Filme filme3 = new Filme("Interstellar", 2014, "Christopher Nolan", "O melhor!");
+        Funcionario funcionario = new Funcionario("João Silva", 30, 1.75, 70.5, "Gerente", 3000.00, "Recursos Humanos");
 
-        List<Filme> listaInicial = new ArrayList<>();
-        listaInicial.add(filme1);
-        listaInicial.add(filme2);
 
-        GestorFilmes gestorFilmes = new GestorFilmes(listaInicial);
+        funcionario.promover("Diretor", 5000.00);
 
-        gestorFilmes.adicionarFilme(filme3);
+        System.out.println(funcionario);
 
-        gestorFilmes.listarFilmes();
-
-        gestorFilmes.removerFilme(1);
-
-        gestorFilmes.listarFilmes();
     }
 }
